@@ -1,0 +1,154 @@
+.formBox{
+    display: flex;
+    position: relative;
+    width: 40.99453125vw;
+    min-width: 251px;
+}
+
+.searchField{
+    height: 41px;
+    padding: 0px 1rem;
+    font-size: 1rem;
+    color: white;
+    width: 100%;
+    border-radius: 13px;
+    border: none;
+    background-image: linear-gradient(107deg, rgb(26, 48, 60), rgb(24, 55, 44));
+    box-shadow: rgb(255, 255, 255) 0px 0px 1px;
+    transition: 0.1s ease-in-out;
+    min-width: 251px;
+    box-sizing: border-box;
+}
+
+.searchField:hover, .searchField:hover ~ .suggBox{
+    box-shadow: rgb(255, 255, 255) 0px 0px 3px;
+}
+
+.searchField:focus, .searchField:focus ~ .suggBox{
+    box-shadow: rgb(255, 255, 255) 0px 0px 2px;
+}
+
+.searchField::-webkit-search-cancel-button {
+    display: none;
+}
+
+.searchField::placeholder{
+    color: rgba(255, 255, 255, 0.733);
+}
+
+.searchField:focus{
+    outline: none;
+}
+
+.suggBox{
+    position: absolute;
+    padding: 0;
+    top: 26px;
+    border-top: 2px solid rgba(255, 255, 255, 0.326);
+    width: 100%;
+    border-radius: 0 0 13px 13px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 1px;
+    transition: 0.1s ease-in-out;
+    z-index: 10;
+    background-color: rgb(24, 55, 44); 
+}
+
+.suggBox:hover, .suggBox:hover ~ .searchField{
+    box-shadow: rgb(255, 255, 255) 0px 0px 3px;
+}
+
+.suggBox li {
+     list-style-type: none;
+     text-wrap: nowrap;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     color: white;
+     background-image: linear-gradient(107deg, rgb(26, 48, 60), rgb(24, 55, 44));
+     padding: 10px 20px;
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+     width: 100%;
+     box-sizing: border-box;
+}
+
+.suggBox li span {
+    flex: 1;
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+  }
+
+.suggBox li:hover{
+    background: rgba(255, 255, 255, 0.178);
+}
+
+.suggBox li:last-child{
+    border-radius: 0 0 13px 13px;
+}
+
+.suggBox li img{
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.searchIcon{
+    position: absolute;
+    right: 0.9rem;
+    top: 7px;
+    width: 27px !important;
+    height: 25px !important;
+    color: white;
+    cursor: pointer;
+}
+
+.clearIcon{
+    position: absolute;
+    left: 0.3rem;
+    top: 8.5px;
+    color: white;
+    cursor: pointer;
+}
+
+.loadingIcon{
+    color: white !important;
+    position: absolute;
+    right: 3.2rem;
+    top: 10px;
+}
+
+.searchContainer {
+    position: sticky;
+    z-index: 10;
+}
+  
+.searchIcon {
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 425px) {
+    .formBox{
+       position: absolute;
+       min-width: 93vw;
+       right: -56px;
+    } 
+    .searchField{
+        box-shadow: none;
+    }
+
+    .searchField:hover, .searchField:hover ~ .suggBox{
+        box-shadow: none;
+    }
+    
+    .searchField:focus, .searchField:focus ~ .suggBox{
+        box-shadow: rgb(255, 255, 255) 0px 0px 5px;
+    }
+
+    .searchContainer {
+        margin-left: auto;
+    }
+    
+}
+

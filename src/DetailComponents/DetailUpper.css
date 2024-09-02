@@ -1,0 +1,227 @@
+.detailUpperOuter{
+    height: auto;
+}
+
+.detailUpper{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    background-image: url("https://image.tmdb.org/t/p/w1280/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg");
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: 1px top;
+    position: relative;
+    --gradient: linear-gradient(to right, rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.3));
+}
+
+.detailUpper::before{
+    content: "";
+    position: absolute;
+    background: var(--gradient);
+    /* backdrop-filter: blur(1px); */
+    width: 100%;
+    height: 100%;
+}
+
+.detailImg{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin: 0 2.5rem;
+    z-index: 1;
+}
+
+.detailImg img{
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px white;
+}
+
+.detailTextArea{
+    margin-top: 22px;
+    z-index: 1;
+    color: white;
+}
+
+.detailHead{
+    margin-bottom: 1.5rem;
+}
+
+.detailTitle{
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 2px;
+    margin-top: 0;
+    min-width: 28rem;
+}
+
+.detailTitle span{
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.detailCat{
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.detailIcons{
+    display: flex;
+    align-items: center;
+    height: 6rem;
+}
+
+.detailScore{
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.detailScore span:first-child{
+    margin-bottom: 6px;
+}
+
+.detailFav{
+    margin-left: 3rem; 
+    border: 1px solid white;
+    box-shadow: 0 0 5px white;
+    padding: 0.6rem;
+    border-radius: 50%;
+    background-color: #081c22;
+    transition: 100ms ease-in-out !important;
+    cursor: pointer;
+}
+
+.detailFav:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 7px white;
+}
+
+.detailFav:active{
+    transform: scale(0.9);
+}
+
+.customTooltip {
+    background-color: #081c22 !important;
+    box-shadow: 0 0 5px white !important;
+    font-size: 0.8rem !important;
+    text-align: center;
+    width: 5rem !important;
+}
+  
+.customArrow::before {
+    background-color: #081c22 !important;
+    box-shadow: 0 0 5px white !important;
+}
+
+.detailOverview{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-top: 3rem; */
+    padding-right: 4rem;
+    height: 16rem;
+    box-sizing: border-box;
+}
+
+.detailOverview span{
+    opacity: 0.7;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.detailOverview p{
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 425px){
+
+    .detailUpperOuter{
+        height: 700px;
+        width: 100%;
+        background: var(--gradient);
+        border-bottom: 3px solid rgb(56, 55, 55);
+        position: relative;
+    }
+
+    .detailTextArea{
+        position: absolute;
+        top: 200px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .detailTitle{
+        text-align: center;
+        font-size: 20px;
+        min-width: auto;
+    }
+
+    
+    .detailTitle span{
+        font-size: 16px;
+    }
+
+    .detailCatInner{
+        text-align: center;
+        margin-top: 11px;
+        font-size: 13px;
+    }
+
+    .detailCatInner div{
+        margin-top: 5px;
+    }
+
+    .detailImg{
+        margin: 0 1.5rem;
+    }
+
+    .detailImg img{
+        width: 97px;
+        border-radius: 10px;
+        border: 1px solid white;
+        box-shadow: 0 0 20px 10px black;
+    }
+
+    .detailUpper{
+        height: 185px;
+    }
+
+    .detailUpper::before{
+        background: none;
+    }
+
+    .detailIcons{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .detailFav{
+        margin: 0 12px 0 0;
+
+    }
+
+    .detailScore{
+        opacity: 0.7;
+    }
+
+    .detailIconsHr{
+        margin: 0 40px;
+        height: 25px;
+        width: 1px;
+        opacity: 0.5;
+        background-color: white;
+    }
+
+    .detailOverview{
+        margin: 0 20px;
+        padding: 0;
+    }
+
+    .detailOverview h2{
+        margin: 10px 0 0 0;
+    }
+}

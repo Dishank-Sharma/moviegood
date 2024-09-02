@@ -1,0 +1,30 @@
+body{
+  margin: 0;
+}
+
+:root {
+  background-color: #081118;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+  appearance: none;
+  width: 0.7rem;
+  background-color: #161e24;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: #5d6265;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+ 
+}

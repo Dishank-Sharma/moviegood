@@ -1,0 +1,43 @@
+.logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    min-width: 12rem;
+    text-decoration: none;
+}
+
+.logo img{
+   width: 32px;
+}
+
+.logo span{
+    font-size: 1.7rem;
+    color: #00dc89;
+    margin-left: 3px;
+    stroke: 2px wheat;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 3px #00dc89;
+    text-decoration: none;
+}
+
+.logo span:hover{
+    color: #00ffaa;
+}
+
+.errorLogo{
+    margin: 2rem;
+    position: absolute; 
+    z-index: 5;
+}
+
+@media screen and (max-width: 425px){
+    .logo{
+        min-width: 10.5rem;
+    }
+    .logo span{
+        font-size: 1.4rem;
+    }
+    .logo img{
+        width: 29px;
+     }
+}

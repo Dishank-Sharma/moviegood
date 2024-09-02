@@ -1,0 +1,87 @@
+.catTab{
+    display: flex;
+    color: white;
+    max-height: 34px;
+    min-height: 34px;
+    align-items: center;
+}
+
+.itemTab{
+    position: relative;
+}
+
+.itemBut{
+    font-weight: 700;
+    padding: 7px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+    margin-right: 2rem;
+    text-wrap: nowrap; 
+}
+
+.itemBut:hover{
+   background-color: #5d626572; 
+}
+
+.itemBut:hover ~ .itemList, .itemList:hover{
+    transform: scale(1); 
+}
+
+.itemList{
+    position: absolute;
+    top: 23px;
+    left: 0;
+    width: 9rem;
+    background-color: #5d6265;
+    padding: 0;
+    border-radius: 6px;
+    transition: 200ms ease-in-out;
+    transform-origin: top left;
+    transform: scale(0);
+    z-index: 300;
+}
+
+.itemList li {
+    list-style-type: none;
+    padding: 13px 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    
+}
+
+.itemList li:first-child{
+    border-radius: 6px 6px 0 0;
+}
+
+.itemList li:last-child{
+    border-radius:  0 0 6px 6px;
+}
+
+.itemList li:hover {
+    background-color: gray;
+}
+
+.itemListLink{
+    text-decoration: none;
+
+}
+
+@media screen and (max-width: 425px){
+    .catTab::-webkit-scrollbar{
+        display: none;
+    }
+
+    .itemSpace{
+        display: none;
+    }
+    
+    .itemBut:last-child{
+        display: none;
+    }
+    .itemBut{
+        margin-right: 1rem;
+    }
+    
+}

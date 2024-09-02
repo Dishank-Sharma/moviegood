@@ -1,0 +1,12 @@
+.coverLoader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #081118;
+    z-index: 61;
+}
+
+.coverLoader{
+    width: 100%;
+    height: 100% !important;
+}

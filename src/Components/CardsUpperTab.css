@@ -1,0 +1,66 @@
+.CardsUpperTab{
+    display: flex;
+    position: relative;
+    color: white;
+    align-items: center;
+    height: 42px;
+    margin-bottom: 1rem;
+}
+
+.leftInner{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin-left: 64px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    opacity: 0.8;
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.leftInner:hover{
+    opacity: 1;
+}
+
+.leftInner .ArrowIcon{
+    font-size: 1.5rem !important;
+    margin-bottom: 2px;
+    margin-left: 4px;
+}
+
+.rightInner{
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    align-items: center;    
+}
+
+
+.backIcon, .forwardIcon{
+    font-size: 3rem !important;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+}
+
+.backIcon:hover, .forwardIcon:hover{
+    opacity: 1;
+} 
+
+@media screen and (max-width: 425px){
+
+    .CardsUpperTab{
+        margin-bottom: 0.3rem;
+    }
+
+    .leftInner{
+        margin-left: 20px;
+        font-size: 0.9rem;
+    }
+
+    .rightInner{
+        display: none;
+    }
+}

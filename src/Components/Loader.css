@@ -1,0 +1,19 @@
+.loader{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: 0px;
+    width: 100%;
+    border-radius: 5px;
+    z-index: 510;
+}
+
+.progressBar{
+    position: absolute;
+    top: 0;
+    background-color: #081118 !important;
+}
+
+.progressBar .MuiLinearProgress-bar{
+    background-color: #00dc89;
+}

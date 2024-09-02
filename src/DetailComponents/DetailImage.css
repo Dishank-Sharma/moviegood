@@ -1,0 +1,69 @@
+.detailImage{
+    padding: 30px 40px;
+    color: white;
+}
+
+.detailImageInner{
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.detailImageInner::-webkit-scrollbar{  
+    appearance: none;
+    height: 0.5rem;
+}
+
+.detailImageInner::-webkit-scrollbar-thumb{
+    background-color: #5d6265;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.detailImageInner::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -1px;
+    width: 80px;
+    pointer-events: none;
+    background: linear-gradient(to right, transparent, #08111895, #081118 );
+}
+
+
+.detailImageInner.scrollFade::after{
+    display: none;
+}
+
+
+.detailImageInner img{
+    width: 410px;
+    margin: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px white;
+}
+
+@media screen and (max-width: 425px){
+
+    .detailImage{
+        padding: 0 10px 0 20px;
+    }
+
+    .detailImage h1 {
+        font-size: 17px;
+    }
+
+    .detailImageInner img{
+        width: 250px;
+    }
+
+    .detailImageInner img:first-child{
+        margin-left: 3px;
+    }
+
+    .detailImageInner::-webkit-scrollbar{  
+        display: none;
+    }
+}

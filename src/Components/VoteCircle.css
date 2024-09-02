@@ -1,0 +1,106 @@
+.voteCircle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid #444444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.innerCircle {
+    width: 29px;
+    height: 29px;
+    background-color: #2a2a2a;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voteText {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1; 
+    cursor: context-menu;
+}
+
+.voteText sup{
+    font-size: 5px;
+}
+
+
+/* Detail Page */
+
+.detailVoteCircle{
+    position: static;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #081c22;
+    box-shadow: 0 0 3px white;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.detailVoteCircle:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 5px white;
+}
+
+.detailInnerCircle{
+    width: 50px;
+    height: 50px;
+    background-color: #081c22;
+    cursor: pointer;
+}
+
+.detailVoteText{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+ 
+.detailVoteText sup{
+    font-size: 8px;
+}
+
+@media screen and (max-width: 425px){
+    .voteCircle {
+        width: 28px;
+        height: 28px;
+    }
+
+    .detailVoteCircle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .innerCircle {
+        width: 24px;
+        height: 24px;
+    }
+
+    .detailInnerCircle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .voteText {
+        font-size: 11px;
+    }
+
+    .detailVoteText {
+        font-size: 19px;
+    }
+
+    .voteText sup{
+        font-size: 4px;
+    }
+
+    .detailVoteText sup{
+        font-size: 7px;
+    }
+}

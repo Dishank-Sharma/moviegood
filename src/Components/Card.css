@@ -1,0 +1,138 @@
+.card{
+    color: white;
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: 3rem;
+}
+
+.card::-webkit-scrollbar {
+    display: none; 
+}
+
+.cardContentOuter{
+   width: 160px;
+    height: 315px;
+    cursor: pointer;
+    margin-right: 4rem;
+    position: relative;
+    color: white;
+} 
+.cardContentOuter:first-child{
+    margin-left: 64px;
+}
+
+.cardContent{
+    margin-bottom: 19px; 
+    position: relative;
+}
+
+.cardImg{
+    width: 160px;
+    border-radius: 6px;
+}
+
+.cardContent::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
+    height: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.cardContent:hover:before{
+    opacity: 1;
+}
+
+.addIcon{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.662);
+    color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.addIcon:hover{
+    background-color: #00dc89;
+}
+
+.cardContentOuter:hover .addIcon{
+    border-radius: 20px;
+    width: auto;
+}
+
+.addIcon .favoritesText{
+    display: none;
+}
+
+.cardContentOuter:hover .addIcon .favoritesText{
+    display: inline;
+    margin: 3px 8px 0 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.cardTitle{
+    opacity: 0.7;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: 100ms ease-in-out;
+}
+
+.cardContentOuter:hover .cardTitle{
+    opacity: 1;
+}
+
+.voteCircle{
+    bottom: 3.6rem;
+    left: 0.5rem;
+}
+
+
+@media screen and (max-width: 425px){
+
+    .card{
+        margin-bottom: 1.5rem;
+    }
+
+    .cardImg {
+        width: 125px;
+    }
+
+    .cardContentOuter{
+        width: 125px;
+        height: 263px;
+        margin-right: 1.5rem;
+    }
+    
+    .cardTitle{
+        font-size: 0.75rem;
+    } 
+
+    .cardContentOuter:hover .addIcon .favoritesText{
+        display: none;
+    }
+
+    .cardContentOuter:first-child{
+        margin-left: 20px;
+    }
+
+    .voteCircle{
+        bottom: 3.8rem;
+        left: 0.5rem;
+    }
+}

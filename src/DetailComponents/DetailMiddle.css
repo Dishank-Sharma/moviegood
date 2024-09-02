@@ -1,0 +1,176 @@
+.detailMiddle{
+    color: white;
+    padding: 30px 40px 30px 40px;
+    display: flex;
+}
+
+.detailLeft{
+    float: 1;
+    max-width: calc(100% - 210px);
+    min-width: calc(100% - 210px);
+    margin-right: 5px;
+}
+
+.detailCardOuter{
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+    position: relative;
+    margin-right: 30px;
+
+}
+
+.detailCardOuter::-webkit-scrollbar{  
+    appearance: none;
+    height: 0.5rem;
+}
+
+.detailCardOuter::-webkit-scrollbar-thumb{
+    background-color: #5d6265;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.detailCardOuter::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -1px;
+    width: 80px;
+    pointer-events: none;
+    background: linear-gradient(to right, transparent, #08111895, #081118 );
+}
+
+.detailCardOuter.scrollFade::after{
+    display: none;
+}
+
+.detailCard{
+    display: flex;
+    flex-direction: column;
+    min-width: 140px;
+    width: 140px;
+    height: 274px;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 0 5px white;
+    margin: 10px;
+    cursor: context-menu;
+    position: relative;
+}
+
+.detailCard img{
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.detailCardTitle{
+    font-weight: 700;
+    margin: 8px 0 0 8px ;
+}
+
+.detailCardExtra{
+    opacity: 0.5;
+    margin: 8px 8px 0 8px;
+    font-size: 0.9rem;
+}
+
+.detailRight{
+    flex: 0 0 260;
+}
+
+.detailSocial{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.detailSocial i{
+    font-size: 1.7rem;
+    margin-right: 10px;
+}
+
+.detailSocial i:last-child{
+    font-size: 1.4rem;
+    color: white;
+}
+
+.detailSocial hr{
+    height: 1.2rem;
+    width: 0.3px;
+    background-color: white;
+    margin: 0 15px 0 5px;
+    opacity: 0.7;
+}
+
+.detailRightText{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.detailRightText span:last-child{
+    margin-top: 8px;
+    opacity: 0.7;
+}
+
+
+.imageAnime {
+    position: absolute;
+    width: 100%;
+    height: 175px !important;
+}
+
+@media screen and (max-width: 425px){
+
+    .detailMiddle {
+        color: white;
+        padding: 30px 0 10px 20px;
+        display: flex;
+    }
+
+    .detailCardOuter {
+        margin-right: 0;
+    }
+
+    .detailRight{
+        display: none
+    }
+
+    .detailLeft{
+        min-width: 100%;
+    }
+
+    .detailLeft h2{
+        font-size: 17px;
+    }
+
+    .detailCard{
+        min-width: 121px;
+    }
+
+    .detailCard img{
+        height: 146px;
+    }
+
+    .detailCard:first-child{
+        margin-left: 3px;
+    }
+
+    .detailCardOuter::-webkit-scrollbar{  
+        display: none;
+    }
+
+    .imageAnime {
+        position: absolute;
+        width: 100%;
+        height: 146px !important;
+    }
+
+}

@@ -1,0 +1,129 @@
+.navTab{
+    display: flex;
+    align-items: center;
+    max-width: 17rem;
+    min-width: 17rem;
+    justify-content: space-between;
+}
+
+.bellIcon{
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.bellBox{
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    transition: background-color 200ms;
+    margin-left: 1rem;
+}
+
+.bellBox:hover{
+    background-color: #ffffff23;
+}
+
+.bellBadge .MuiBadge-badge{
+    background-color: rgb(255, 0, 98);
+    font-weight: 700;
+}
+
+
+.favorites{
+    font-family: "Nunito", sans-serif;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.04rem;
+    border: none;
+    width: 175px;
+    height: 32px;
+    background-color: #00dc89;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 100ms;
+}
+
+.favorites:hover{
+    background-color: #03ff9e;
+}
+
+.favoriteIcon {
+    color: rgb(255, 0, 98);
+    font-size: 1.3rem !important;
+    margin-right: 5px;
+}
+
+.notifMsg{
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    background-color: white;
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 9px 0 9px 9px;
+    width: 13rem;
+    min-height: 8rem;
+    box-shadow: 0 0 5px white;
+    transform-origin: top right;
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 20;
+    
+}
+
+.notifMsg h5 {
+    opacity: 0.7;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.notifMsg h3 span{
+    opacity: 0.6;
+}
+
+.notifMsg li{
+    list-style-type: none;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px black;
+    position: relative;
+}
+
+.notifMsg li b {
+    display: block;
+    margin-bottom: 3px;
+}
+.notifMsg li span{
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.notifMsg .closeIcon{
+    color: rgb(255, 0, 98);
+    position: absolute;
+    font-size: 1.3rem;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 425px){
+
+    .navTab{
+        max-width: auto;
+        min-width: auto;
+        margin-right: 6px;
+    }
+    
+    .favorites{
+        display: none;
+    }
+}
