@@ -1,6 +1,6 @@
 # MovieGood
 
-![MovieGood](![mockup](https://github.com/user-attachments/assets/d61af279-d263-4f02-bb65-b28843d2f977)
+![MovieGood](![mockup](https://github.com/user-attachments/assets/d61af279-d263-4f02-bb65-b28843d2f977))
 
 MovieGood is a movie and TV show search website built using React, React Router DOM, and the TMDB API. This project replicates the design and functionality of reelgood.com, providing users with a seamless browsing experience across various devices.
 
@@ -26,4 +26,24 @@ To run this project locally:
    ```bash
    git clone https://github.com/Dishank-Sharma/moviegood.git
 
-   
+2. Navigate to the project directory:
+   ```bash
+   cd moviegood
+
+3. Install dependencies:
+   ```bash
+   npm install
+
+4. Add your TMDB API key:
+   • Create a .env file in the root of the project.
+   • Add the following line to your .env file:
+   ```bash
+   VITE_API_KEY=your_tmdb_api_key
+
+5. Start the development server:
+   ```bash
+   npm start
+
+## Acknowledgements
+
+[TMDB API](https://developer.themoviedb.org/reference/intro/getting-started) for providing movie and TV show data.
