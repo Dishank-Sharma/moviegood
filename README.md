@@ -51,6 +51,10 @@ To run this project locally:
    ```bash
    npm start
 
+## License
+
+This project is licensed under the MIT License.
+
 ## Acknowledgements
 
 [TMDB API](https://developer.themoviedb.org/reference/intro/getting-started) for providing movie and TV show data.
