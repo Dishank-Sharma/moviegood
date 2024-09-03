@@ -37,6 +37,7 @@ To run this project locally:
 4. Add your TMDB API key:
    - Create a `.env` file in the root of the project.
    - Add the following line to your .env file:
+     
    ```bash
    VITE_API_KEY=your_tmdb_api_key
    ```
