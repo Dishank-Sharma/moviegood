@@ -43,7 +43,7 @@ export default function MainSearch() {
       <DisplayCard
         query={query}
         onLoad={hendleLoad}
-        search={`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&include_adult=false&language=en-US&page=`}
+        search={`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${query}&include_adult=false&language=en-US&page=`}
       />
       <NavBottom/>
     </div>

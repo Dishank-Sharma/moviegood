@@ -46,9 +46,11 @@ export default function Card({
           img: "https://image.tmdb.org/t/p/w185" + list.poster_path,
           title: list.title === undefined ? list.name : list.title,
           year:
-            list.release_date === undefined
-              ? list.first_air_date.split("-")[0]
-              : list.release_date.split("-")[0],
+          list.release_date
+          ? list.release_date.split("-")[0]
+          : list.first_air_date
+          ? list.first_air_date.split("-")[0]
+          : "Unknown",
           vote: list.vote_average,
         }));
       });

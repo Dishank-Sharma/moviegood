@@ -20,11 +20,12 @@ export default function CardSingle({
 
   let navigate = useNavigate();
 
-  let handleMovieClick = (id, type) => {
-    if (type === "tv") {
-      navigate(`/tv/${id}`);
+  let handleMovieClick = () => {
+    console.log(mediaType)
+    if (mediaType === "tv") {
+      navigate(`/tv/${itemId}`);
     } else {
-      navigate(`/movie/${id}`);
+      navigate(`/movie/${itemId}`);
     }
   };
 
@@ -76,7 +77,7 @@ export default function CardSingle({
     <div
       className="cardSingle"
       key={itemId}
-      onClick={() => handleMovieClick(itemId, mediaType)}
+      onClick={handleMovieClick}
     >
       <div className="singleCardContent">
         <img

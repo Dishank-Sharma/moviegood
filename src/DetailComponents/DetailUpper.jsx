@@ -11,7 +11,7 @@ export default function DetailUpper({ onLoad, isLoading = false }) {
   let [bgColor, setBgColor] = useState("#0000");
   let [isSize, setIsSize] = useState(false);
 
-  const apiKey = import.meta.env.VITE_API_KEY; 
+  const apiKey = import.meta.env.VITE_API_KEY;
 
   let { id } = useParams();
   let location = useLocation();
@@ -36,10 +36,11 @@ export default function DetailUpper({ onLoad, isLoading = false }) {
             img: "https://image.tmdb.org/t/p/w500" + data.poster_path,
             background: data.backdrop_path,
             title: data.title === undefined ? data.name : data.title,
-            year:
-              data.release_date === undefined
-                ? data.first_air_date.split("-")[0]
-                : data.release_date.split("-")[0],
+            year: data.release_date
+              ? data.release_date.split("-")[0]
+              : data.first_air_date
+              ? data.first_air_date.split("-")[0]
+              : "Unknown",
             date:
               data.release_date === undefined
                 ? data.first_air_date.split("-").reverse().join("/")
@@ -156,15 +157,15 @@ export default function DetailUpper({ onLoad, isLoading = false }) {
             <span className="detailCat">
               {isSize ? (
                 <div className="detailCatInner">
-                  ● {movieData.date} {" "}
+                  ● {movieData.date}{" "}
                   {!currLocation
-                    ?  `● ${movieData.runtime.hour}h ${movieData.runtime.min}m`
+                    ? `● ${movieData.runtime.hour}h ${movieData.runtime.min}m`
                     : ""}{" "}
                   <br /> <div>● {movieData.genres}</div>
                 </div>
               ) : (
                 <>
-                  {movieData.date} ● {movieData.genres} {" "}
+                  {movieData.date} ● {movieData.genres}{" "}
                   {!currLocation
                     ? `● ${movieData.runtime.hour}h ${movieData.runtime.min}m`
                     : ""}
