@@ -4,6 +4,10 @@
 
 MovieGood is a movie and TV show search website built using React, React Router DOM, and the TMDB API. This project replicates the design and functionality of reelgood.com, providing users with a seamless browsing experience across various devices.
 
+## Live Demo
+
+Check out the live demo here: [MovieGood Website](https://movie-good.netlify.app/)
+
 ## Features
 
 - **Search Functionality:** Allows users to search for movies and TV shows.
